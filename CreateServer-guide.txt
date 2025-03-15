@@ -1,0 +1,73 @@
+View -> terminal -> trust and continue -> node app
+
+p.s. 3000 port - default in Node.js
+
+
+Callback function, short if/else with template :) 
+
+(error) => {
+    error? console.log(error) : console.log(`listening port ${PORT}`);
+}
+
+p.s. Content-Type header помогает браузеру понять какие типы данных ему были отправлены
+
+text/html
+text/plain
+
+Node.js #9 Создание базового роутинга (Create base Routing)
+============================================================
+
+Роутинг или маршрутизация, позволяет пользователю передвигаться по сайту. Она может быть нативная (типа ссылки) и может быть эмулированый роутинг, если мы говорим о SPA (single page applicaion).
+Во втором случае вместо перехода, будет рэндэринг нового компонента.
+
+
+
+
+  const createPath = (page) => path.resolve(__dirname, 'views', `${page}.html`);
+
+  let basePath = '';
+
+  switch(req.url){
+    case '/home':
+    case '/index.html':    
+    case '/':
+        basePath = createPath('index');
+        break;
+    case '/contacts':
+        basePath = createPath('contacts');
+        break;
+    default:    
+        basePath = createPath('error');
+        break;
+  }
+  
+  
+  
+  
+  if(req.url = '/'){
+    fs.readFile('./views/index.html', (err,data) => {
+        if(err) {
+            console.log(err);
+            res.end();
+        }
+        else {
+            res.write(data);
+            res.end();
+        }
+        
+    });
+  }
+
+});
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
