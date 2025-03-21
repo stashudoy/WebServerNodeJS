@@ -1,0 +1,56 @@
+
+10.) Пакетный менеджер (NPM & Packages)
+
+nodemon  - пакет для автоматического сохранения и перезагрузки сервера.
+
+-g - глобально на комп установит и будет применяться для всех проектов.
+
+--save-dev локально добавит зависимость для конкретного проекта.
+
+
+Для запуска пакета в приложении добавляем запись в script package.json:
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  
+  
+  npm run dev - запуск приложения
+  
+  ─$ npm i express ejs   
+  
+  ejs позоволит добавлять динамические данные в UI
+  
+  
+  
+  11.) NodeJS & Express 
+  ======================
+  В Express в отличии от node.js сам автоматически определяет тип отправляемых данных и сетает нужный заголовок.
+  
+  
+  13.) промежуточное ПО 
+  =================================================
+  Ф-ия app.use() до роутингов, чтоб успела сработать
+  
+  p.s. По умолчанию node.js запрещает работать со статическими файлами, чтоб пользователь не смог просмотреть любые файлы на сервере, поэтому мы открываем доступ с помощью
+  промежуточного ПО:  app.use(express.static('styles'));
+  
+  Список промежуточного ПО: expressjs.com
+  
+  
+  18.) MVC
+  =========
+  Model -> View -> Controller
+  
+  p.s. for work with database
+  
+  Model - is object of data that used in app. (post.js, contact.js)
+  
+  View - interface for rendering this data for users. (post.ejs, contacts.ejs, index.ejs, error.ejs)
+  
+  Controller is where used this methods. (post-controller.js, contact-controller.js)
+  
+  
+  
+ 

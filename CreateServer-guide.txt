@@ -62,11 +62,49 @@ Node.js #9 Создание базового роутинга (Create base Routi
 
   
   
+ 14.) Обработка POST запроса
+ =============================
+ 
+  p.s. для подключения кода <%- include('./partials/head.ejs') %> 
+  
+  p.s. Если action не указана в  <form id="post-form" method="post" action="/add-post">, то страница будет ссылаться сама на себя.
+  
+  15.) Интеграция БД в приложение
+  =================================
+  
+  https://www.mongodb.com/products/platform/cloud       //need VPN  stashud83@gmail.com  register with google
+  
+  - создаем новый Cluster free
+  - skip personalization
+  - Create a database user: username stashud83  password OtTtWCrND6GXbFiJ
+  
+  npm i mongoose   //устанавливаем mongoose т.к. напрямую обращаться к бд мы не можем.
+  
+  В server.js (Connecting with MongoDB Driver)
+  
+  const mongoose = require('mongoose');
+  
+  mongodb+srv://stashud83:OtTtWCrND6GXbFiJ@cluster0.taizt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   
   
   
+  20.) Download app to free hosting Heroku (Deploy)
+  ==========================================
   
+  npm i dotenv chalk -s
   
+  To easily log in later, save this URL:
+https://velocity-customization-41972.my.salesforce.com
+ 
+Username:
+khudintsev-rwnm@force.com
+
+
+Wzm_Fg4QNa'd:"* 
+
+(rtiyfiugyuigiy685FJHFHJF)
+
+
   
   
   

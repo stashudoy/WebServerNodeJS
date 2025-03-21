@@ -18,6 +18,7 @@ const server = http.createServer((req, res) => {
 
   console.log('Server request');  
   console.log(req.url, req.method);
+  //console.log("test");
 
   /* Отправим что-нибдуь в ответ с сервера для этого воспользуемся объектом response -> res, у которого есть 2 метода, write() и end()
   p.s. setHeader() указывает тип возвращаемого контента  */
